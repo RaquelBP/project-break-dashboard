@@ -36,7 +36,7 @@ function date(){
     
     const day = date.getDay()
     const dayFormated = dateFormating(day)
-    const month = date.getMonth()
+    const month = date.getMonth() + 1
     const monthFormated = dateFormating(month)
     const year = date.getFullYear()
     const yearFormated = dateFormating(year)
