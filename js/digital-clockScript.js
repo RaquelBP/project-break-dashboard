@@ -3,11 +3,12 @@ const dateDom= document.getElementById("date")
 const fraseDom= document.getElementById("frase")
 
 
-//Ejecuta primero la función de fecha para que no tarde 1 segundo en aparecer
+//Ejecuta primero las funcines para que no tarde 1 segundo en aparecer
 display()
-//Actualiza el reloj cada segundo
+backgroundImg()
+//Actualiza cada X segundos
 setInterval(display, 1000)
-
+setInterval(backgroundImg, 15000)
 
 
 function date(){
@@ -58,31 +59,31 @@ function dateFormating(element){
 function frases(hour, minute){
     let frase = ""
     if(hour >= 0 && hour < 7){
-        frase="Es hora de descansar. Apaga y sigue mañana"
+        frase="Es hora de descansar"
     }
     else if(hour >= 7 && hour < 12){
-        frase="Buenos días, desayuna fuerte y a darle al código"
+        frase="¡Buenos días!"
     }
     else if(hour >= 12 && hour < 14){
-        frase="Echa un rato más pero no olvides comer"
+        frase="Se acerca la hora de comer"
     }
     else if(hour >= 14 && hour < 16){
-        frase="Espero que hayas comido"
-    }
-    else if(hour >= 14 && hour < 16){
-        frase="Espero que hayas comido"
+        frase="Que tengas un buen comienzo de tarde"
     }
     else if(hour >= 16 && hour < 18){
-        frase="Buenas tardes, el último empujón"
+        frase="¡Buenas tardes!"
     }
     else if(hour >= 18 && hour < 22){
-        frase="Esto ya son horas extras, ... piensa en parar pronto"
+        frase="Se acerca la hora de cenar"
     }
     else if(hour >= 22 && hour <= 23 && minute <= 59){
-        frase="Esto ya son horas extras, ... piensa en parar pronto"
-    }
-    else{
-        frase= "Error"
+        frase="¡Buenas noches!"
     }
     return frase
+}
+
+function backgroundImg(){
+    const randomNum= Math.floor(Math.random()*10)
+    const imageUrl = `/img/background_0${randomNum}.jpg`;
+    document.body.style.backgroundImage = `url("${imageUrl}")`;
 }
