@@ -1,7 +1,15 @@
-const clockDom= document.getElementById("clock")
-const dateDom= document.getElementById("date")
-const fraseDom= document.getElementById("frase")
+const clockDom = document.getElementById("clock")
+const dateDom = document.getElementById("date")
+const fraseDom = document.getElementById("frase")
+const homeDom = document.getElementById("home")
+const clockPageDom = document.getElementById("digital-clock-page")
 
+homeDom.addEventListener("click", ()=>{
+    window.open("/index.html", "_self")
+})
+clockPageDom.addEventListener("click", ()=>{
+    window.open("/digital-clock.html", "_self")
+})
 
 //Ejecuta primero las funcines para que no tarde 1 segundo en aparecer
 display()
