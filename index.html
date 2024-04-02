@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/indexStyles.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Dashboard</title>
 </head>
 <body>
     <header>
         <nav>
-            <div>
+            <div id="name-div"><input id="name-input" type="text" placeholder="Escribe tu nombre"></div>
+            <div id="pages">
                 <ul>
-                    <li><a href="/digital-clock.html">Digital Clock</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                    <li><a href="#">Page 4</a></li>
+                    <li id="digital-clock-page">Digital Clock</li>
+                    <li>Page 2</li>
+                    <li>Page 3</li>
+                    <li>Page 4</li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
         <article>
-            <h1>Dashboard</h1>
+            <h1 id="dashboard-h1">Dashboard</h1>
             <section>Page 1 Shortcut</section>
             <section>Page 2 Shortcut</section>
             <section>Page 3 Shortcut</section>
@@ -37,6 +39,6 @@
             <li><a href="#">Enlace 3</a></li>
         </ul>
     </footer>
-    <script src="./js/indexScript.js"></script>
+    <script src="./js/indexScript.js" type="module"></script>
 </body>
 </html>

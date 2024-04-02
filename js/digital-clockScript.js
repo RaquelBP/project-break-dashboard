@@ -1,3 +1,6 @@
+import {backgroundImg} from "../js/common.js"
+
+const bodyDom = document.body
 const clockDom = document.getElementById("clock")
 const dateDom = document.getElementById("date")
 const fraseDom = document.getElementById("frase")
@@ -66,32 +69,51 @@ function dateFormating(element){
 
 function frases(hour, minute){
     let frase = ""
-    if(hour >= 0 && hour < 7){
-        frase="Es hora de descansar"
-    }
-    else if(hour >= 7 && hour < 12){
-        frase="¡Buenos días!"
-    }
-    else if(hour >= 12 && hour < 14){
-        frase="Se acerca la hora de comer"
-    }
-    else if(hour >= 14 && hour < 16){
-        frase="Que tengas un buen comienzo de tarde"
-    }
-    else if(hour >= 16 && hour < 18){
-        frase="¡Buenas tardes!"
-    }
-    else if(hour >= 18 && hour < 22){
-        frase="Se acerca la hora de cenar"
-    }
-    else if(hour >= 22 && hour <= 23 && minute <= 59){
-        frase="¡Buenas noches!"
+    if(localStorage.getItem("Nombre")){
+        if(hour >= 0 && hour < 7){
+            frase=`Es hora de descansar, ${localStorage.getItem("Nombre")}`
+        }
+        else if(hour >= 7 && hour < 12){
+            frase=`¡Buenos días, ${localStorage.getItem("Nombre")}!`
+        }
+        else if(hour >= 12 && hour < 14){
+            frase=`Se acerca la hora de comer, ${localStorage.getItem("Nombre")}`
+        }
+        else if(hour >= 14 && hour < 16){
+            frase=`Que tengas un buen comienzo de tarde, ${localStorage.getItem("Nombre")}`
+        }
+        else if(hour >= 16 && hour < 18){
+            frase=`¡Buenas tardes, ${localStorage.getItem("Nombre")}!`
+        }
+        else if(hour >= 18 && hour < 22){
+            frase=`Se acerca la hora de cenar, ${localStorage.getItem("Nombre")}`
+        }
+        else if(hour >= 22 && hour <= 23 && minute <= 59){
+            frase=`¡Buenas noches, ${localStorage.getItem("Nombre")}!`
+        }
+    } else{
+        if(hour >= 0 && hour < 7){
+            frase="Es hora de descansar"
+        }
+        else if(hour >= 7 && hour < 12){
+            frase="¡Buenos días!"
+        }
+        else if(hour >= 12 && hour < 14){
+            frase="Se acerca la hora de comer"
+        }
+        else if(hour >= 14 && hour < 16){
+            frase="Que tengas un buen comienzo de tarde"
+        }
+        else if(hour >= 16 && hour < 18){
+            frase="¡Buenas tardes!"
+        }
+        else if(hour >= 18 && hour < 22){
+            frase="Se acerca la hora de cenar"
+        }
+        else if(hour >= 22 && hour <= 23 && minute <= 59){
+            frase="¡Buenas noches!"
+        }
+
     }
     return frase
-}
-
-function backgroundImg(){
-    const randomNum= Math.floor(Math.random()*10)
-    const imageUrl = `/img/background_0${randomNum}.jpg`;
-    document.body.style.backgroundImage = `url("${imageUrl}")`;
 }

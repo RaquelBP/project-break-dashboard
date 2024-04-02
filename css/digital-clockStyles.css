@@ -31,6 +31,7 @@ nav{
     gap: 30px;
     padding: 0px;
 }
+
 #home, #pages li{
     background-color: white;
     cursor: pointer;
