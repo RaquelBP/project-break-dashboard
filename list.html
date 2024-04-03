@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/digital-clockStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <title>Reloj Digital</title>
+    <title>Enlaces de interés</title>
 </head>
 <body>
     <header>
@@ -24,13 +24,18 @@
     </header>
     <main>
         <article>
-            <div id="digital-clock">
-                <div id="clock"></div>
-                <div id="date"></div>
-                <div id="frase"></div>
+            <div id="list">
+                <h1>Enlaces de interés</h1>
+                <div>
+                    <input type="text" placeholder="Nombre del enlace" id="title-input"></input>
+                    <input type="text" placeholder="Pega aquí la URL" id="link-input"></input>
+                    <button id="boton-link">Añadir enlace</button>
+                </div>
+                <div id="valid-link"></div>
+                <div id="display-link"></div>
             </div>
         </article>
     </main>
-    <script src="./js/digital-clockScript.js" type="module"></script>
+    <script src="./js/listScript.js" type="module"></script>
 </body>
 </html>

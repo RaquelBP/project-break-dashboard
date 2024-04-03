@@ -1,4 +1,4 @@
-import {backgroundImg} from "../js/common.js"
+import {backgroundImg, pageEventListeners} from "../js/common.js"
 
 const bodyDom = document.body
 const clockDom = document.getElementById("clock")
@@ -7,13 +7,7 @@ const fraseDom = document.getElementById("frase")
 const homeDom = document.getElementById("home")
 const clockPageDom = document.getElementById("digital-clock-page")
 
-homeDom.addEventListener("click", ()=>{
-    window.open("/index.html", "_self")
-})
-clockPageDom.addEventListener("click", ()=>{
-    window.open("/digital-clock.html", "_self")
-})
-
+pageEventListeners()
 //Ejecuta primero las funcines para que no tarde 1 segundo en aparecer
 display()
 backgroundImg()

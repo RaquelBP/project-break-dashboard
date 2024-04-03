@@ -1,16 +1,16 @@
-import {backgroundImg} from "../js/common.js"
+import {backgroundImg, pageEventListeners} from "../js/common.js"
 
-const bodyDom = document.body
-const clockPageDom = document.getElementById("digital-clock-page")
+//const bodyDom = document.body
+//const clockPageDom = document.getElementById("digital-clock-page")
+
 const nameInput = document.getElementById("name-input")
 const dashboardH1 = document.getElementById("dashboard-h1")
 
+pageEventListeners()
 backgroundImg()
 setInterval(backgroundImg, 15000)
 
-clockPageDom.addEventListener("click", ()=>{
-    window.open("/digital-clock.html", "_self")
-})
+
 
 
 //Revisa si Nombre existe en el localStorage
