@@ -21,6 +21,9 @@ nav{
     justify-content: space-between;
     color: black;
     margin: 0px 40px;
+    position: relative;
+    z-index: 1;
+    
 }
 #pages ul{
     list-style: none;
@@ -52,6 +55,8 @@ nav{
 }
 
 article{
+    position: relative;
+    z-index: 0;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -68,6 +73,7 @@ article{
     width: 500px;
     height: 200px;
     border-radius: 20px;
+    margin-top: 10vh;
 }
 #clock{
     font-size: 55px;
@@ -76,4 +82,68 @@ article{
 #date{
     font-size: 20px;
     margin: 5px;
+}
+
+
+#weather{
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgba(0, 0, 0, 0.427);
+    border-radius: 20px;
+    
+}
+#weather-current-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: red;*/
+    margin: 0px;
+    padding: 0px;
+}
+#weather-day-display{
+    width: 850px;
+    text-align: center;
+}
+#weather-day-display ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 3px;
+    margin: 0px;
+    padding: 0px;
+}
+#weather-day-display li{
+ text-align: center;
+}
+#weather-day-display li.current{
+    background-color: rgba(0, 0, 0, 0.523);
+    border-radius: 20px;
+}
+#degrees{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(255, 255, 142);
+    margin: 0px;
+    padding: 0px;
+    /*background-color: red;*/
+}
+#weather-city-input{
+    border-radius: 8px;
+    position: relative;
+    top: -29px;
+    right: 300px;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    border: rgb(122, 122, 122) solid 1px;
+    
+}
+#weather-title{
+    /*background-color: red;*/
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
 }
