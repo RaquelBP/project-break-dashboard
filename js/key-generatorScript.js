@@ -48,10 +48,7 @@ function generator(input){
     //Declara los elementos posibles para utilizar en la contraseña
     const passwordElements= ["ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz", "0123456789", "!@#$%^&*()-_=+"]
     //Pon en una variable cada tipo de elemento
-    const mayusculas= passwordElements[0]
-    const minusculas= passwordElements[1]
-    const numeros= passwordElements[2]
-    const simbolos= passwordElements[3]
+    const[mayusculas, minusculas, numeros, simbolos] = passwordElements
     //Array vacío que contendrá la nueva contraseña
     let password= []
 
