@@ -80,7 +80,7 @@ function displayLink(linkList){
         const valuesLink= element[1]
         const linksLi = document.createElement("li")
         
-        //Create Delete Button
+        //Crea Delete Button
         const deleteButton= document.createElement("button")
         const btnId= i
         deleteButton.setAttribute("id", "deleteBtn-"+btnId)
@@ -93,10 +93,14 @@ function displayLink(linkList){
         linksLi.appendChild(linksA)
         linksA.setAttribute("href", valuesLink)
         linksA.setAttribute("target", "_blank")
+    })
 
-        //Delete Button Event Listener
-        deleteButton.addEventListener("click", (event)=>{
+    //Delete Button Event Listener. El evento se aplica al ul en vez de a cada hijo (delete button) por la delegación de eventos
+    linksUl.addEventListener("click", (event)=>{
+        if(event.target.type==="submit"){   //Que solo haga el evento si el target que lo ha activado es un tipo input (botón delete)
+            console.log(event.target.type)
             const clickedBtn= event.target.closest("button").id
+            console.log(clickedBtn)
             const clickedBtnId= clickedBtn.split("-")[1].trim()
 
             linkList.splice(clickedBtnId, 1)
@@ -105,8 +109,8 @@ function displayLink(linkList){
 
             console.log(linkList)
 
-            console.log(clickedBtnId)        
-        })
+            console.log(clickedBtnId)
+        }
     })
 }
 
