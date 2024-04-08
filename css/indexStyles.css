@@ -283,4 +283,5 @@ section #weather #weather-title, section #weather #weather-current-display{
     color: rgb(167, 167, 167);
 }
 #list li button:hover{
-    background-color: rgb(167, 167, 167);
+    background-color: rgb(167, 167, 167)
+}
