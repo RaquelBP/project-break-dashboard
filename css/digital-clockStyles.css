@@ -50,6 +50,8 @@ nav{
     
     transition: background-color .2s;
 }
+
+
 #home:hover, #pages li:hover{
  background-color: rgb(220, 220, 220);
 }
@@ -63,7 +65,7 @@ article{
     justify-content: center;
     align-items: center;
 }
-#digital-clock{
+#digital-clock, #key-generator{
     background-color: rgba(0, 0, 0, 0.427);
     display: flex;
     flex-direction: column;
@@ -73,7 +75,7 @@ article{
     width: 500px;
     height: 200px;
     border-radius: 20px;
-    margin-top: 10vh;
+    margin: 10vh 0px 0px 0px;
 }
 #clock{
     font-size: 55px;
@@ -84,9 +86,10 @@ article{
     margin: 5px;
 }
 
-
 #weather{
     margin-top: 20vh;
+}
+#weather, #list{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,4 +149,93 @@ article{
     /*background-color: red;*/
     margin: 20px 0px 0px 0px;
     padding: 0px;
+}
+
+
+#key-generator-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#display-password{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    margin: 15px 0px 0px 0px;
+}
+#key-generator-div{
+    margin: 0px;
+    height: fit-content;
+}
+#key-generator h1{
+    margin: 20px 0px 0px 0px;
+}
+#inputNumber{
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    border: rgb(122, 122, 122) solid 1px;
+    border-radius: 8px;
+}
+#generate{
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+#list{
+    padding: 20px;
+    margin-top: 10vh;
+}
+
+#display-link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#list ul{
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 540px;
+    padding: 0px;
+}
+#list li{
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.523);
+    border-radius: 10px;
+    width: fit-content;
+    max-width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    padding-right: 25px;
+}
+
+#list li button{
+    border-radius: 20px;
+    position: absolute;
+    border: none;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+#list li a{
+    text-decoration: none;
+    color: white;
+    transition: color .5s;
+}
+#list li a:hover{
+    color: rgb(167, 167, 167);
+}
+#list li button:hover{
+    background-color: rgb(167, 167, 167);
 }

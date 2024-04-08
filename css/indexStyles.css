@@ -21,7 +21,42 @@ nav{
     justify-content: space-between;
     color: black;
     margin: 0px 40px;
+    position: relative;
+    z-index: 1;
+    
 }
+#name-input{
+    border-radius: 10px;
+    border: solid rgb(185, 185, 185);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.427);
+    padding: 10px;
+}
+#name-input::placeholder{
+    color: rgb(185, 185, 185);
+}
+
+#div-index{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#items-index, #weather-index{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+section{
+    overflow: hidden;
+}
+section #weather, section #list, section #key-generator, section #digital-clock{
+    margin: 0px;
+    /*padding: 0px;*/
+}
+
 #pages ul{
     list-style: none;
     display: flex;
@@ -52,13 +87,15 @@ nav{
 }
 
 article{
+    position: relative;
+    z-index: 0;
     height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#digital-clock{
+#digital-clock, #key-generator{
     background-color: rgba(0, 0, 0, 0.427);
     display: flex;
     flex-direction: column;
@@ -68,12 +105,182 @@ article{
     width: 500px;
     height: 200px;
     border-radius: 20px;
+    margin: 10vh 0px 0px 0px;
 }
+section #digital-clock{
+    height: 130px;
+}
+
 #clock{
     font-size: 55px;
     margin-bottom: 10px;
 }
+section #clock{
+    margin-top: 30px;
+}
+
 #date{
     font-size: 20px;
     margin: 5px;
 }
+
+#weather{
+    margin-top: 20vh;
+}
+section #weather{
+    height: 300px;
+    width: 500px;
+}
+
+section #weather #weather-title, section #weather #weather-current-display{
+    position: relative;
+    top: 160px;
+}
+
+#weather, #list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  rgba(0, 0, 0, 0.427);
+    border-radius: 20px;
+    
+}
+#weather-current-display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: red;*/
+    margin: 0px;
+    padding: 0px;
+}
+#weather-day-display{
+    width: 850px;
+    text-align: center;
+}
+#weather-day-display ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 3px;
+    margin: 0px;
+    padding: 0px;
+}
+#weather-day-display li{
+ text-align: center;
+}
+#weather-day-display li.current{
+    background-color: rgba(0, 0, 0, 0.523);
+    border-radius: 20px;
+}
+#degrees{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(255, 255, 142);
+    margin: 0px;
+    padding: 0px;
+    /*background-color: red;*/
+}
+#weather-city-input{
+    border-radius: 8px;
+    position: relative;
+    top: -29px;
+    right: 300px;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    border: rgb(122, 122, 122) solid 1px;
+    
+}
+#weather-title{
+    /*background-color: red;*/
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+}
+
+
+#key-generator-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#display-password{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    margin: 15px 0px 0px 0px;
+}
+#key-generator-div{
+    margin: 0px;
+    height: fit-content;
+}
+#key-generator h1{
+    margin: 20px 0px 0px 0px;
+}
+#inputNumber{
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    border: rgb(122, 122, 122) solid 1px;
+    border-radius: 8px;
+}
+#generate{
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#list{
+    padding: 20px;
+    margin-top: 10vh;
+}
+
+#display-link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#list ul{
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 540px;
+    padding: 0px;
+}
+#list li{
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.523);
+    border-radius: 10px;
+    width: fit-content;
+    max-width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    padding-right: 25px;
+}
+
+#list li button{
+    border-radius: 20px;
+    position: absolute;
+    border: none;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+#list li a{
+    text-decoration: none;
+    color: white;
+    transition: color .5s;
+}
+#list li a:hover{
+    color: rgb(167, 167, 167);
+}
+#list li button:hover{
+    background-color: rgb(167, 167, 167);

@@ -1,11 +1,11 @@
 import {backgroundImg, pageEventListeners} from "../js/common.js"
 
-const bodyDom = document.body
+//const bodyDom = document.body
 const clockDom = document.getElementById("clock")
 const dateDom = document.getElementById("date")
 const fraseDom = document.getElementById("frase")
-const homeDom = document.getElementById("home")
-const clockPageDom = document.getElementById("digital-clock-page")
+//const homeDom = document.getElementById("home")
+//const clockPageDom = document.getElementById("digital-clock-page")
 
 pageEventListeners()
 //Ejecuta primero las funcines para que no tarde 1 segundo en aparecer

@@ -1,5 +1,6 @@
 import {backgroundImg, pageEventListeners} from "../js/common.js"
 
+//import {} from "../js/digital-clockScript.js";
 //const bodyDom = document.body
 //const clockPageDom = document.getElementById("digital-clock-page")
 
@@ -56,3 +57,7 @@ function displayName() {
         dashboardH1.innerText = `Dashboard`
     }
 }
+
+document.getElementById("frase").style.visibility="hidden"
+document.getElementById("weather-day-display").style.visibility="hidden"
+document.getElementById("weather-city-input").style.visibility="hidden"
