@@ -4,6 +4,15 @@ const linkInputDom= document.getElementById("link-input")
 const botonLinkDom= document.getElementById("boton-link")
 const displayLinkDom= document.getElementById("display-link")
 const validLinkDom= document.getElementById("valid-link")
+const listPageDom = document.getElementById("list-page")
+const homeDom= document.getElementById("home")
+
+
+if(homeDom){
+    listPageDom.setAttribute("class", "active")
+} else{
+    listPageDom.setAttribute("class", "non-active")
+}
 
 pageEventListeners()
 backgroundImg()

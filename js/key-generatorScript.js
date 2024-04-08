@@ -2,7 +2,15 @@ import {backgroundImg, pageEventListeners} from "../js/common.js"
 const buttonDom= document.getElementById("generate")
 const inputNumberDom= document.getElementById("inputNumber")
 const displayPasswordDom= document.getElementById("display-password")
+const keyGeneratorPageDom = document.getElementById("key-generator-page")
+const homeDom= document.getElementById("home")
 
+
+if(homeDom){
+    keyGeneratorPageDom.setAttribute("class", "active")
+} else{
+    keyGeneratorPageDom.setAttribute("class", "non-active")
+}
 
 pageEventListeners()
 backgroundImg()

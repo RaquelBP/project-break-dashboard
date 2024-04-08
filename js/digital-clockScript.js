@@ -5,7 +5,16 @@ const clockDom = document.getElementById("clock")
 const dateDom = document.getElementById("date")
 const fraseDom = document.getElementById("frase")
 //const homeDom = document.getElementById("home")
-//const clockPageDom = document.getElementById("digital-clock-page")
+const clockPageDom = document.getElementById("digital-clock-page")
+const homeDom= document.getElementById("home")
+
+
+if(homeDom){
+    clockPageDom.setAttribute("class", "active")
+} else{
+    clockPageDom.setAttribute("class", "non-active")
+}
+
 
 pageEventListeners()
 //Ejecuta primero las funcines para que no tarde 1 segundo en aparecer

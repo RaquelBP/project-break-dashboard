@@ -9,6 +9,15 @@ const windDom= document.getElementById("wind")
 const weatherDayDisplayDom = document.getElementById("weather-day-display")
 const weatherCurrentDisplayDom= document.getElementById("weather-current-display")
 const weatherInput= document.getElementById("weather-city-input")
+const weatherPageDom = document.getElementById("weather-page")
+const homeDom= document.getElementById("home")
+
+
+if(homeDom){
+    weatherPageDom.setAttribute("class", "active")
+} else{
+    weatherPageDom.setAttribute("class", "non-active")
+}
 
 pageEventListeners()
 backgroundImg()
