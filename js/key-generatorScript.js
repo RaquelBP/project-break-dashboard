@@ -10,14 +10,24 @@ setInterval(backgroundImg, 15000)
 
 
 //Declara como el valor de la variable input, lo que vale el input del usuario
-let input= inputNumberDom.value
+let input= Number(inputNumberDom.value)
 //Actualiza el valor del input dependiendo de la selección del usuario
 inputNumberDom.addEventListener("focusout", ()=>{
-    input= inputNumberDom.value
+    input= Number(inputNumberDom.value)
+    if(!input || typeof input !== "number" || input < 12){
+        console.log("Error")
+        inputNumberDom.value=12
+    } else if (input>50){
+        inputNumberDom.value=50
+    }
 })
 //Lanza la función que genera la contraseña dependiendo del input del usuario y ponla en el DOM
 buttonDom.addEventListener("click", ()=>{
+    if(!input || typeof input !== "number"){
+        console.log("Error")
+    } else{
     displayPassword(generator(input))
+    }
 })
 
 
