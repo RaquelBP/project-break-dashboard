@@ -71,18 +71,19 @@ function displayLink(linkList){
         const valuesLink= element[1]
         const linksLi = document.createElement("li")
         
+        //Create Delete Button
+        const deleteButton= document.createElement("button")
+        const btnId= i
+        deleteButton.setAttribute("id", "deleteBtn-"+btnId)
+        deleteButton.textContent="x"
+        linksLi.appendChild(deleteButton)
+        
         linksUl.appendChild(linksLi)
         const linksA= document.createElement("a")
         linksA.innerText=keysLink
         linksLi.appendChild(linksA)
         linksA.setAttribute("href", valuesLink)
-
-        //Create Delete Button
-        const deleteButton= document.createElement("button")
-        const btnId= i
-        deleteButton.setAttribute("id", "deleteBtn-"+btnId)
-        deleteButton.textContent="Eliminar"
-        linksLi.appendChild(deleteButton)
+        linksA.setAttribute("target", "_blank")
 
         //Delete Button Event Listener
         deleteButton.addEventListener("click", (event)=>{
