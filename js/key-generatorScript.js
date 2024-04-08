@@ -23,16 +23,21 @@ let input= Number(inputNumberDom.value)
 inputNumberDom.addEventListener("focusout", ()=>{
     input= Number(inputNumberDom.value)
     if(!input || typeof input !== "number" || input < 12){
-        console.log("Error")
+        console.log("Error A")
+        console.log(input)
         inputNumberDom.value=12
+        input = Number(inputNumberDom.value)
+        console.log(input)
     } else if (input>50){
         inputNumberDom.value=50
+        input = Number(inputNumberDom.value)
     }
 })
 //Lanza la función que genera la contraseña dependiendo del input del usuario y ponla en el DOM
 buttonDom.addEventListener("click", ()=>{
     if(!input || typeof input !== "number"){
-        console.log("Error")
+        console.log("Error B")
+        console.log(input)
     } else{
     displayPassword(generator(input))
     }
