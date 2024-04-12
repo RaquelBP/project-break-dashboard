@@ -2,16 +2,23 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     min-height: 100vh;
-    
     color: white;
     font-family: 'Poppins';
+    position: relative;
+}
+#background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
     transition: background-image 2s ease-in-out;
+    mask-image: linear-gradient(to bottom, black 50%, transparent);
+    mask-mode: alpha
 }
 
 nav{
@@ -54,7 +61,6 @@ section{
 }
 section #weather, section #list, section #key-generator, section #digital-clock{
     margin: 0px;
-    /*padding: 0px;*/
 }
 
 #pages ul{
@@ -289,4 +295,63 @@ section #weather #weather-title, section #weather #weather-current-display{
 }
 #list li button:hover{
     background-color: rgb(167, 167, 167)
+}
+
+
+
+
+@media (max-width: 1100px) {
+
+body{
+    background-color: rgb(27, 27, 27);
+    flex-direction: column;
+}
+header{
+    width: 100vmax;
+    flex-wrap: wrap;
+}
+main{
+    position: relative;
+    top: 350px;
+    width: 100vmax;
+}
+#background-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: linear-gradient(to bottom, black 80%, transparent);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#div-index {
+    width: 100%;
+    position: relative;
+    height: max-content;
+    flex-wrap: wrap;
+    left: 0;
+}
+#clock-article, #weather-article, #list-article, #key-article {
+    top: -350px;
+    width: 100%;
+    position: relative;
+    height: max-content;
+    flex-wrap: wrap;
+    left: 0;
+}
+}
+
+@media (max-height: 750px) and (min-width: 1100px) {
+    main {
+        position: relative;
+        top: 10vh;
+    }
+}
+@media (max-height: 400px) and (min-width: 1100px) {
+    main {
+        position: relative;
+        top: 50vh;
+    }
 }

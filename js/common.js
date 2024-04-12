@@ -5,7 +5,7 @@ function backgroundImg(){
     const img = new Image()  //Crea un objeto imagen que hace que se cargue la imagen en el caché del navegador
     img.src = imageUrl   //Setea el src del objeto imagen que acabamos de crear con el url creado antes
     img.onload = () => {   //onload es un evento que hace que se ejecute el código de dentro una vez la imagen se ha cargado por completo 
-        document.body.style.backgroundImage = `url("${imageUrl}")`
+        document.getElementById("background-container").style.backgroundImage = `url("${imageUrl}")`
     }
 }
 
