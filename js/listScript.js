@@ -90,6 +90,7 @@ function displayLink(linkList){
         linksUl.appendChild(linksLi)
         const linksA= document.createElement("a")
         linksA.innerText=keysLink
+        linksA.setAttribute("title", keysLink)
         linksLi.appendChild(linksA)
         linksA.setAttribute("href", valuesLink)
         linksA.setAttribute("target", "_blank")
