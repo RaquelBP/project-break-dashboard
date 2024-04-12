@@ -20,7 +20,6 @@ setInterval(backgroundImg, 15000)
 
 let linkList= getLinksLocalStorage()
 displayLink(linkList)
-console.log(linkList)
 
 
 
@@ -49,7 +48,6 @@ linkInputDom.addEventListener("focusout", ()=>{
 //Lanza la función que genera la contraseña dependiendo del input del usuario y ponla en el DOM
 botonLinkDom.addEventListener("click", ()=>{
     if(titleInput&&linkInput){
-        //console.log(titleInput, linkInput)
         manageLinks(titleInput, linkInput)
         displayLink(linkList)
         
@@ -65,7 +63,6 @@ function manageLinks(titleInput, linkInput){
     linkList.push(controlArray)
 
     saveLinksLocalStorage()
-    console.log(linkList)
     return linkList
 }
 
@@ -99,18 +96,12 @@ function displayLink(linkList){
     //Delete Button Event Listener. El evento se aplica al ul en vez de a cada hijo (delete button) por la delegación de eventos
     linksUl.addEventListener("click", (event)=>{
         if(event.target.type==="submit"){   //Que solo haga el evento si el target que lo ha activado es un tipo input (botón delete)
-            console.log(event.target.type)
             const clickedBtn= event.target.closest("button").id
-            console.log(clickedBtn)
             const clickedBtnId= clickedBtn.split("-")[1].trim()
 
             linkList.splice(clickedBtnId, 1)
             saveLinksLocalStorage()
             displayLink(linkList)
-
-            console.log(linkList)
-
-            console.log(clickedBtnId)
         }
     })
 }

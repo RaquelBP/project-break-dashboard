@@ -1,15 +1,11 @@
 import {backgroundImg, pageEventListeners} from "../js/common.js"
 
-//import {} from "../js/digital-clockScript.js";
-//const bodyDom = document.body
-//const clockPageDom = document.getElementById("digital-clock-page")
-
 const nameInput = document.getElementById("name-input")
 const dashboardH1 = document.getElementById("dashboard-h1")
 
 pageEventListeners()
 backgroundImg()
-setInterval(backgroundImg, 15000)
+setInterval(backgroundImg, 5000)
 
 
 

@@ -87,8 +87,6 @@ function fetchApi(city){
     })
     .then((data)=>{
         weatherCurrentDisplayDom.style.visibility = "visible";
-        //console.log(data)
-        //console.log(arrangeData(data))
         displayData(arrangeData(data))
 
     })
@@ -106,7 +104,6 @@ function arrangeData(data){
     currentData.humidity = data.current.humidity
     currentData.wind = data.current.wind_kph
 
-    console.log(data.forecast.forecastday[0].hour)
     const dayData = {}
 
     for(let i=0; i<24; i++){
@@ -137,7 +134,6 @@ function displayData(dataArray){
 
 
     const dayData = dataArray[1]
-    console.log(dayData)
 
     const weatherDayUl= document.createElement("ul")
     weatherDayUl.setAttribute("id", "weather-day-ul")
@@ -170,12 +166,7 @@ function displayData(dataArray){
 
 
 function checkCurrentTime(dataArray, weatherLi){
-    //console.log("1")
     const localTime = dataArray[0].localTime.split(' ')[1].split(':')[0]
-    //console.log("2")
-    console.log(localTime)
-    //console.log("3")
     weatherLi.item(localTime).classList.toggle("current")
-    //console.log("4")
     return localTime
 }
