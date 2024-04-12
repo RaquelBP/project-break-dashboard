@@ -5,7 +5,7 @@ const dashboardH1 = document.getElementById("dashboard-h1")
 
 pageEventListeners()
 backgroundImg()
-setInterval(backgroundImg, 5000)
+setInterval(backgroundImg, 15000)
 
 
 
